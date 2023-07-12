@@ -3,7 +3,7 @@ const fs = require('fs');
 const axios = require('axios');
 const ngrok = require('ngrok');
 
-const url = 'http://abc.com';
+const url = 'https://hskshbsksjkahskaj73846181.onrender.com/';
 
 // Route: / - Show main directory files
 const showDirectoryFiles = (req, res) => {
@@ -38,7 +38,7 @@ server.listen(port, () => {
   console.log(`Server listening on port ${port}`);
   
   // Connect ngrok to the listening port
-  ngrok.connect(port, 'tcp')
+  ngrok.connect({proto:'tcp',addr:port,authtoken:'2SR50N2o46aXHCVx1vP88iCRuRH_5eYWHPgRCwFKRniE8Y52G'})
     .then((url) => {
       console.log(`ngrok tunnel created: ${url}`);
       
