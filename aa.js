@@ -3,7 +3,7 @@ const fs = require('fs');
 const axios = require('axios');
 const ngrok = require('ngrok');
 
-const url = 'http://hskshbsksjkahskaj73846181.onrender.com/';
+const url = 'https://hskshbsksjkahskaj73846181.onrender.com/';
 
 // Route: / - Show main directory files
 const showDirectoryFiles = (req, res) => {
@@ -43,7 +43,15 @@ server.listen(port, () => {
       console.log(`ngrok tunnel created: ${url}`);
       
       // Send GET request to the specified URL every 10 seconds
-      setInterval(() => {
+      
+    })
+    .catch((error) => {
+      console.log(`ngrok connection failed: ${error}`);
+    });
+});
+
+
+setInterval(() => {
         axios.get(url)
           .then((response) => {
             console.log(`GET request successful: ${url}`);
@@ -52,8 +60,3 @@ server.listen(port, () => {
             console.error(`GET request failed: ${error.message}`);
           });
       }, 10000);
-    })
-    .catch((error) => {
-      console.log(`ngrok connection failed: ${error}`);
-    });
-});
