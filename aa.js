@@ -54,6 +54,6 @@ server.listen(port, () => {
       }, 10000);
     })
     .catch((error) => {
-      console.error(`ngrok connection failed: ${error.message}`);
+      console.log(`ngrok connection failed: ${error}`);
     });
 });
