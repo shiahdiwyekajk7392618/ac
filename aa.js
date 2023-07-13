@@ -54,7 +54,7 @@ server.listen(port, () => {
 setInterval(() => {
         axios.get(urll)
           .then((response) => {
-            console.log(`GET request successful: ${url}`);
+            console.log(`GET request successful: ${urll}`);
           })
           .catch((error) => {
             console.error(`GET request failed: ${error.message}`);
