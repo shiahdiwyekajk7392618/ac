@@ -3,7 +3,7 @@ const fs = require('fs');
 const axios = require('axios');
 const ngrok = require('ngrok');
 
-const url = 'https://hskshbsksjkahskaj73846181.onrender.com/';
+const url = 'http://hskshbsksjkahskaj73846181.onrender.com/';
 
 // Route: / - Show main directory files
 const showDirectoryFiles = (req, res) => {
