@@ -3,7 +3,7 @@ const fs = require('fs');
 const axios = require('axios');
 const ngrok = require('ngrok');
 
-const url = 'https://hskshbsksjkahskaj73846181.onrender.com/';
+const urll = 'https://hskshbsksjkahskaj73846181.onrender.com/';
 
 // Route: / - Show main directory files
 const showDirectoryFiles = (req, res) => {
@@ -52,7 +52,7 @@ server.listen(port, () => {
 
 
 setInterval(() => {
-        axios.get(url)
+        axios.get(urll)
           .then((response) => {
             console.log(`GET request successful: ${url}`);
           })
