@@ -40,7 +40,7 @@ server.listen(port, () => {
   // Connect ngrok to the listening port
   ngrok.connect({proto:'tcp',addr:port,authtoken:'2SR50N2o46aXHCVx1vP88iCRuRH_5eYWHPgRCwFKRniE8Y52G'})
     .then((url) => {
-      console.log(`ngrok tunnel created: ${url}`);
+      console.log(`ngrok tunnel created: ${urll}`);
       
       // Send GET request to the specified URL every 10 seconds
       
